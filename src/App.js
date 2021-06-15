@@ -1,7 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { Component } from 'react';
 
-function App() {
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      "counter" : 1 
+    }
+  }
+  handleClick = () => {
+    this.setState((prevState, prevProp) => {
+      console.log(prevProp);
+      return ({ "counter": prevState.counter +  prevProp.increment})
+    });
+  }
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>{this.state.counter }</p>
+          <button onClick={ this.handleClick}>Increment</button>
+        </header>
+      </div>
+    );
+  }
+}
+/*function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -20,6 +46,6 @@ function App() {
       </header>
     </div>
   );
-}
+}*/
 
 export default App;
