@@ -2,7 +2,7 @@
   "name": "prev-state",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://git-ajeet.github.io/prep-state",
+  "homepage": "https://git-ajeet.github.io/prev-state",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
